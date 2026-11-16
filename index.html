@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Radar de Mercado · Apex Industrial</title>
+  <meta name="description" content="Cockpit de inteligência de mercado da Apex Industrial. Do sinal externo à decisão do dia. Demonstração com preço de referência pública e exposição simulada." />
+  <link rel="stylesheet" href="fonts/inter.css" />
+  <link rel="stylesheet" href="radar.css" />
+</head>
+<body>
+
+  <nav class="demo-nav">
+    <span class="nav-spacer" aria-hidden="true"></span>
+    <div class="demo-nav-center">
+      Apex Industrial <span>|</span> ambiente interno demonstrativo
+    </div>
+    <div class="nav-tools">
+      <span class="clock">
+        <i aria-hidden="true"></i>
+        <span class="clock-full">Atualizado há 12 min · 20 set · 07:15</span>
+        <span class="clock-short">20 set · 07:15</span>
+      </span>
+      <button class="info-btn" id="btn-sobre" type="button" aria-label="Sobre esta demonstração" title="Sobre esta demonstração">i</button>
+      <span class="demo-badge">Radar · demo</span>
+      <button class="mob-toggle" id="mob-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+    </div>
+  </nav>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <div class="brand-row">
+          <div class="brand-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7" opacity=".6"/><circle cx="12" cy="12" r="11" opacity=".35"/>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-name">Radar de Mercado</div>
+            <div class="brand-sub">Inteligência de mercado</div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sb-nav" aria-label="Navegação principal">
+        <button class="nav-btn active" data-page="home" type="button">
+          <span class="nav-ico" aria-hidden="true">◈</span><span>Radar do dia</span>
+          <span class="tally">1</span>
+        </button>
+        <button class="nav-btn" data-page="fontes" type="button">
+          <span class="nav-ico" aria-hidden="true">◎</span><span>Fontes</span>
+        </button>
+      </nav>
+
+      <div class="tagline">
+        <strong>Do sinal externo à decisão de hoje.</strong>
+        Não mostramos notícias. Mostramos onde elas afetam o negócio.
+      </div>
+
+      <div class="sb-foot">
+        <div class="user-av" aria-hidden="true">EM</div>
+        <div>
+          <div class="user-nm">Eduardo Mesquita</div>
+          <div class="user-role">Diretor de Compras</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main class="main" id="main">
+
+      <section class="page active" id="page-home" data-page="home">
+        <header class="page-hdr">
+          <div>
+            <p class="eyebrow">Cockpit executivo · Sinais externos</p>
+            <h1>Radar de Mercado</h1>
+            <p class="sub">O que mudou fora da empresa, onde isso me afeta e o que olhar hoje.</p>
+            <p class="lead">Cinco famílias de sinal na mesa. Uma merece a reunião de compras. As outras ficam com leitura curta e dono próprio.</p>
+          </div>
+        </header>
+
+        <div class="kpi-strip">
+          <div class="kpi">
+            <div class="lab">Sinais monitorados hoje</div>
+            <div class="val">5</div>
+            <div class="hint">Commodity, câmbio, frete, energia, demanda</div>
+          </div>
+          <div class="kpi hot">
+            <div class="lab">Com impacto relevante</div>
+            <div class="val">1</div>
+            <div class="hint">Aço HRC · análise completa</div>
+          </div>
+          <div class="kpi warn">
+            <div class="lab">Exposição potencial</div>
+            <div class="val">R$ 1,9 mi</div>
+            <div class="hint">Contratos Apex sob pressão do HRC</div>
+          </div>
+        </div>
+
+        <div class="sec-head">
+          <h2>Prioridades de hoje</h2>
+          <p>O aço pede decisão de compras. Câmbio e frete entram com outro dono.</p>
+        </div>
+
+        <div class="prio-grid">
+          <button type="button" class="prio-card crit" data-open="aco">
+            <div class="prio-top">
+              <span class="prio-name">Sinal 1 — Aço</span>
+              <span class="pill crit">Alta atenção</span>
+            </div>
+            <div class="prio-move">+3,7%</div>
+            <div class="prio-sub">no mês · HRC US$ 1.248/t</div>
+            <div class="prio-meta">
+              <div class="row"><span class="k">Exposição estimada</span><span class="v">R$ 1,9 mi</span></div>
+              <div class="row"><span class="k">Impacto</span><span class="v">2 contratos / 3 plantas</span></div>
+            </div>
+            <span class="btn-primary sm">Analisar impacto</span>
+          </button>
+
+          <button type="button" class="prio-card attn" data-open="cambio">
+            <div class="prio-top">
+              <span class="prio-name">Sinal 2 — Câmbio</span>
+              <span class="pill attn">Atenção</span>
+            </div>
+            <div class="prio-move">+3,1%</div>
+            <div class="prio-sub">USD/BRL · 5 dias</div>
+            <div class="prio-meta">
+              <div class="row"><span class="k">Margem exposta</span><span class="v">R$ 780 mil</span></div>
+              <div class="row"><span class="k">Impacto</span><span class="v">Linha Premium</span></div>
+            </div>
+            <span class="btn-ghost sm">Ler sinal</span>
+          </button>
+
+          <button type="button" class="prio-card warn" data-open="frete">
+            <div class="prio-top">
+              <span class="prio-name">Sinal 3 — Frete</span>
+              <span class="pill attn">Operacional</span>
+            </div>
+            <div class="prio-move compact">Atraso crítico</div>
+            <div class="prio-sub">rota Santos → Sul</div>
+            <div class="prio-meta">
+              <div class="row"><span class="k">Impacto</span><span class="v">4 embarques</span></div>
+              <div class="row"><span class="k">Cobertura</span><span class="v">9 dias</span></div>
+            </div>
+            <span class="btn-ghost sm">Ler sinal</span>
+          </button>
+        </div>
+
+        <div class="sec-head">
+          <h2>Outros sinais</h2>
+          <p>Monitorados. Sem alarme de reunião.</p>
+        </div>
+
+        <div class="minor-grid">
+          <button type="button" class="minor-card" data-open="energia">
+            <div class="nm">Energia</div>
+            <div class="mv">+1,2%</div>
+            <span class="pill ok">Na faixa</span>
+          </button>
+          <button type="button" class="minor-card" data-open="semi">
+            <div class="nm">Semicondutores</div>
+            <div class="mv">+0,4%</div>
+            <span class="pill keep">Monitorar</span>
+          </button>
+          <button type="button" class="minor-card" data-open="regulacao">
+            <div class="nm">Regulação</div>
+            <div class="mv">Sem mudança</div>
+            <span class="pill ok">Estável</span>
+          </button>
+          <button type="button" class="minor-card" data-open="demanda">
+            <div class="nm">Demanda</div>
+            <div class="mv">−2,1% Sul</div>
+            <span class="pill keep">Monitorar</span>
+          </button>
+          <button type="button" class="minor-card" data-open="concorrencia">
+            <div class="nm">Concorrência</div>
+            <div class="mv">2 movimentos</div>
+            <span class="pill keep">Monitorar</span>
+          </button>
+        </div>
+
+        <p class="footer-note">Demonstração · preço HRC de referência pública · exposição Apex simulada · 20 set 2026, 07:15</p>
+      </section>
+
+      <section class="page" id="page-detail" data-page="detail">
+        <div id="detail-root"></div>
+      </section>
+
+      <section class="page" id="page-fontes" data-page="fontes">
+        <header class="page-hdr">
+          <div>
+            <p class="eyebrow">Rastreabilidade</p>
+            <h1>Fontes da leitura</h1>
+            <p class="sub">O sinal externo só entra no cockpit depois de cruzar com a exposição da Apex.</p>
+          </div>
+        </header>
+
+        <div class="trust-banner">
+          Cada alerta desta manhã junta uma fonte de mercado com contrato, planta ou cobertura. O preço do jornal não vira decisão sozinho.
+        </div>
+
+        <div class="src-grid">
+          <article class="src-card">
+            <h3>Índice de commodity</h3>
+            <p>Cotação internacional de HRC usada no painel do aço.</p>
+            <dl>
+              <div><dt>Horário</dt><dd>06:45</dd></div>
+              <div><dt>Status</dt><dd><span class="pill ok">Online</span></dd></div>
+              <div><dt>Confiança</dt><dd>Alta</dd></div>
+              <div><dt>Origem</dt><dd>Referência HRC</dd></div>
+            </dl>
+          </article>
+          <article class="src-card">
+            <h3>Feed de câmbio</h3>
+            <p>USD/BRL do sinal de câmbio e da conversão indicativa do HRC.</p>
+            <dl>
+              <div><dt>Horário</dt><dd>06:30</dd></div>
+              <div><dt>Status</dt><dd><span class="pill ok">Online</span></dd></div>
+              <div><dt>Confiança</dt><dd>Alta</dd></div>
+              <div><dt>Origem</dt><dd>PTAX / spot</dd></div>
+            </dl>
+          </article>
+          <article class="src-card">
+            <h3>Monitor logístico</h3>
+            <p>Lead time e embarques da rota Santos → Sul.</p>
+            <dl>
+              <div><dt>Horário</dt><dd>06:00</dd></div>
+              <div><dt>Status</dt><dd><span class="pill attn">Atraso</span></dd></div>
+              <div><dt>Confiança</dt><dd>Média</dd></div>
+              <div><dt>Origem</dt><dd>Frete + TMS</dd></div>
+            </dl>
+          </article>
+          <article class="src-card">
+            <h3>Feed regulatório</h3>
+            <p>Varredura de mudança material nas últimas 72 horas.</p>
+            <dl>
+              <div><dt>Horário</dt><dd>05:50</dd></div>
+              <div><dt>Status</dt><dd><span class="pill ok">Estável</span></dd></div>
+              <div><dt>Confiança</dt><dd>Alta</dd></div>
+              <div><dt>Origem</dt><dd>Diário Oficial</dd></div>
+            </dl>
+          </article>
+          <article class="src-card">
+            <h3>Exposição contratual</h3>
+            <p>Contratos, cobertura e volume aberto que transformam o preço em reais.</p>
+            <dl>
+              <div><dt>Horário</dt><dd>06:55</dd></div>
+              <div><dt>Status</dt><dd><span class="pill ok">Sincronizado</span></dd></div>
+              <div><dt>Confiança</dt><dd>Alta</dd></div>
+              <div><dt>Origem</dt><dd>ERP · Apex</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="hdr-actions src-actions">
+          <button type="button" class="btn-primary" data-open="aco">Abrir análise do aço</button>
+          <a class="btn-ghost" href="https://tradingeconomics.com/commodity/hrc-steel" target="_blank" rel="noopener noreferrer">Fonte pública do HRC</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <dialog id="sobre" aria-labelledby="sobre-title">
+    <div class="dialog-body">
+      <p class="eyebrow">Demonstração</p>
+      <h2 id="sobre-title">Sobre este radar</h2>
+      <p>Apex Industrial é uma empresa fictícia. Eduardo Mesquita abre o cockpit às 07:15 e vê o que mudou fora da planta antes da reunião.</p>
+      <p>O preço do HRC e as notícias ligadas no painel do aço são referência pública. Contratos, plantas, cobertura e valores em reais são simulados: no uso real, sairiam do ERP.</p>
+      <p>A tela não emite pedido, não executa hedge e não substitui o terminal de commodity. O sistema aponta. A pessoa decide.</p>
+      <p>A demonstração também pode ser aberta direto no navegador, e o código está no GitHub.</p>
+      <p class="dialog-sign">Desenvolvido por <a href="https://www.linkedin.com/in/engeduardomesquita/" target="_blank" rel="noopener noreferrer">Eduardo Mesquita</a>.</p>
+      <p class="dialog-sign"><a href="https://edumesqg.github.io/radar-de-mercado/" target="_blank" rel="noopener noreferrer">Ver a demo online</a></p>
+      <p class="dialog-sign"><a href="https://github.com/Edumesqg/radar-de-mercado" target="_blank" rel="noopener noreferrer">Repositório no GitHub</a></p>
+      <div class="dialog-actions">
+        <button type="button" class="btn-primary" id="sobre-fechar">Fechar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="radar.js"></script>
+</body>
+</html>
