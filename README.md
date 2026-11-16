@@ -6,7 +6,7 @@ A empresa da tela é fictícia: **Apex Industrial**. Não há servidor, banco ne
 
 Desenvolvido por [Eduardo Mesquita](https://www.linkedin.com/in/engeduardomesquita/).
 
-**[Ver a demo online](https://edumesqg.github.io/radar-de-mercado/)**
+**[Ver a demo online](https://edumesqg.github.io/Radar_mercado_IA/)**
 
 [English](#english)
 
@@ -51,7 +51,7 @@ Preço HRC, câmbio usado na conversão e as notícias com link são referência
 
 ## Como abrir
 
-A demo já está no ar: [edumesqg.github.io/radar-de-mercado](https://edumesqg.github.io/radar-de-mercado/).
+A demo já está no ar: [edumesqg.github.io/Radar_mercado_IA](https://edumesqg.github.io/Radar_mercado_IA/).
 
 Para abrir nesta pasta, use `index.html` no navegador. Não há instalação. A fonte Inter está em `fonts/`. Nada é carregado de uma CDN.
 
@@ -84,7 +84,7 @@ The company on screen is fictional: **Apex Industrial**. There is no server, no 
 
 Built by [Eduardo Mesquita](https://www.linkedin.com/in/engeduardomesquita/).
 
-**[Open the live demo](https://edumesqg.github.io/radar-de-mercado/)**
+**[Open the live demo](https://edumesqg.github.io/Radar_mercado_IA/)**
 
 ### The problem
 
@@ -127,7 +127,7 @@ The HRC price, the exchange rate used in the conversion, and the linked news ite
 
 ### How to open it
 
-The demo is live: [edumesqg.github.io/radar-de-mercado](https://edumesqg.github.io/radar-de-mercado/).
+The demo is live: [edumesqg.github.io/Radar_mercado_IA](https://edumesqg.github.io/Radar_mercado_IA/).
 
 To open this folder locally, use `index.html` in a browser. There is no install. The Inter font is in `fonts/`. Nothing is loaded from a CDN.
 
